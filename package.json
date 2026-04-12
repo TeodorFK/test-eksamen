@@ -1,0 +1,28 @@
+{
+  "name": "test-eksamen",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeodorFK/test-eksamen.git"
+  },
+  "author": "Teodor F. Knutsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeodorFK/test-eksamen/issues"
+  },
+  "homepage": "https://github.com/TeodorFK/test-eksamen#readme",
+  "description": "",
+  "dependencies": {
+    "argon2": "^0.44.0",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.4.1",
+    "nodemon": "^3.1.14"
+  }
+}
