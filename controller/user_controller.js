@@ -10,7 +10,7 @@ const createToken = (id) => {
 
 const login_get = (req, res) => {
   try {
-    res.render('login ');
+    res.render('login');
   } catch (err) {
     console.log(err);
   }
@@ -28,7 +28,7 @@ const login_post = async (req, res) => {
     }
     const token = createToken(foundUser._id);
     res.cookie('jwt', token, { httpOnly: true, maxAge: 1000 * 1000 });
-    res.redirect('/profile/:username');
+    res.redirect('/');
   } catch (err) {
     console.log(err);
     res.status(400).json({ err });
@@ -54,7 +54,7 @@ const signup_post = async (req, res) => {
     console.log(user._id);
     const token = createToken(user._id);
     res.cookie('jwt', token, { httpOnly: true, maxAge: 1000 * 1000 });
-    res.redirect('profile/:username');
+    res.redirect('/');
   } catch (err) {
     console.log(err);
     res.status(400).send('error, user didnt get created');

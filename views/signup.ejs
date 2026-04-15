@@ -1,0 +1,25 @@
+<%- include('./partials/head.ejs') %>
+<body>
+  <%- include('./partials/header.ejs') %>
+
+  <section class="form">
+    <form action="/signup" method="POST">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" />
+
+      <label for="">Password</label>
+      <input type="password" name="password" id="password" />
+
+      <label for="">Repeat Password</label>
+      <input type="password" name="confPassword" id="confPassword" />
+
+      <button type="submit">Log In</button>
+      <div class="account">
+        <p>Already have an account?</p>
+        <a href="/login">Click here</a>
+      </div>
+    </form>
+  </section>
+</body>
+
+<%- include('./partials/footer.ejs') %>

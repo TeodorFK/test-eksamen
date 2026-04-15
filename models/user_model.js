@@ -11,14 +11,18 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  role: {
+    type: String,
+    enum: ['user', 'representant', 'admin'],
+    default: 'user',
+  },
 });
 
 userSchema.pre('save', async function () {
   try {
     if (!this.isModified('password')) return;
-
-    const hash = await argon2.hash(this.password);
-    this.password = hash;
+    
+    this.password =  await argon2;
   } catch (err) {
     console.log(err);
   }
