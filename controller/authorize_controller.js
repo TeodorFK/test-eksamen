@@ -1,5 +1,6 @@
 const { User } = require('../models/user_model');
 const Bedrift = require('../models/bedrift_model');
+const Feedback = require('../models/feedback_model');
 
 // Viser admin-siden med alle brukere
 const admin_page = async (req, res) => {
@@ -45,4 +46,20 @@ const represant_page = async (req, res) => {
   }
 };
 
-module.exports = { admin_page, represant_page, admin_post };
+//Gjør at man kan poste ting
+const representant_post = (req, res) => {
+  //Lager feedback objekt etter input
+  const upload = new Feedback(req.body);
+  //Lagrer feedback i databasen
+  upload
+    .save()
+    .then(() => {
+      //Sender brukeren tilbake til admin siden
+      res.redirect('/representant');
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).send('Internal Server Error');
+    });
+};
+module.exports = { admin_page, represant_page, admin_post, representant_post };

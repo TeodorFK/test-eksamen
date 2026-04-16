@@ -13,5 +13,11 @@ router.get(
   isRepresant,
   controller.represant_page,
 );
+router.post(
+  '/representant',
+  authenticate,
+  isRepresant,
+  controller.representant_post,
+);
 
 module.exports = router;

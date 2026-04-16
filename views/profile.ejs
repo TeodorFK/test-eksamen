@@ -4,13 +4,23 @@
   <%- include('./partials/header') %> 
 
   <div class="profile-container">
-    <% Companies.forEach(company => { %>
+    <section>
+      <% Companies.forEach(company => { %>
       <div class="company">
         <h1>Bedrift: <%= company.bedrift %></h1>
         <h2>Stilling: <%= company.typeBedrift %></h2>
         <h2>Representant: <%= company.representant %></h2>
       </div>
     <% }) %>
+    </section>
+    <section>
+      <% feedback.forEach(feed => { %>
+      <div class="feed">
+        <h2>Tilbakemeldinger</h2>
+        <p><%= feed.feedback %></p>
+      </div>
+    <% }) %>
+    </section>
   </div>
     
 

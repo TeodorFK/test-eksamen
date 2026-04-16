@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 
 const { User, verifyPassword } = require('../models/user_model');
 const Bedrift = require('../models/bedrift_model');
+const Feedback = require('../models/feedback_model');
 
 //lager en JWT token med brukerens id
 const createToken = (id) => {
@@ -85,17 +86,21 @@ const profile = async (req, res) => {
     const Companies = await Bedrift.find({ elev: loggedInUser._id });
     console.log(Companies);
 
+    //Henter alle feedbacks knyttset til brukeren
+    const feedback = await Feedback.find({ elev: loggedInUser._id });
+    console.log(feedback);
+
     // Sjekker om brukeren prøver å åpne en annen sin profil
     if (loggedInUser.username !== req.params.username) {
       //redirecter til egen profil
       return res.redirect(`/profile/${loggedInUser.username}`);
     }
-    console.log('BEDRIFTENE:', Companies);
 
     //Render profile pagen med brukerens data og bedrifter
     res.render('profile', {
       user: loggedInUser,
       Companies,
+      feedback,
     });
   } catch (err) {
     console.log(err);
