@@ -84,3 +84,23 @@ button:hover {
   background-color: var(--dark-blue-color);
   transform: translateY(-0.15vh);
 }
+
+.uploads {
+  max-width: 35vw;
+  margin: 3vh auto 5vh;
+  padding: 0 1vw;
+}
+
+.company {
+  background-color: #ffffff;
+  padding: 2vh 2vw;
+  border-radius: 1.5vh;
+  box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.08);
+  margin-bottom: 2vh;
+}
+
+.company h2,
+.company h3 {
+  margin: 0.5vh 0;
+  color: var(--Font-color);
+}

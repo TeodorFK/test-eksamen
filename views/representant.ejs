@@ -1,24 +1,43 @@
 <%- include('./partials/head') %>
+<link rel="stylesheet" href="/css/representant.css">
 <body>
   <%- include('./partials/header') %>
-  <h1>Welcome Representant</h1>
-  <div>
-    <section>
-      <form action="/representant" method="POST">
-        <label for="elev">Elev</label>
-        <select name="elev" id="elev">
-          <% users.forEach(user=>{ %>
-            <% if(user.role == 'user'){ %>
-            <option value="<%= user._id %>">
-              <%= user.username %>
-            </option>
-            <% }}) %>
-        </select>
-        <label for="feedback">Tilbakemelding</label>
-        <input type="text" name="feedback">
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-  </div>
+  <main class="page-wrapper">
+    <section class="form-section">
+      <h1>Welcome Representant</h1>
+      <div class="form-card">
+        <form action="/representant" method="POST">
+          <label for="elev">Elev</label>
+          <select name="elev" id="elev">
+            <% users.forEach(user => { %>
+              <% if (user.role == 'user') { %>
+                <option value="<%= user.username %>">
+                  <%= user.username %>
+                </option>
+              <% } %>
+            <% }) %>
+          </select>
 
+          <label for="feedback">Tilbakemelding</label>
+          <input type="text" name="feedback" id="feedback">
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="feedback-section">
+      <div class="feedback-box">
+        <h2>Tidligere Tilbakemeldinger</h2>
+      <div class="feedback-list">
+        <% rep.forEach(feedback => { %>
+          <div class="feedback-card">
+            <h2>Elev: <%= feedback.elev %></h2>
+            <h3>Tilbakemelding: <%= feedback.feedback %></h3>
+          </div>
+        <% }) %>
+      </div>
+      </div>
+    </section>
+  </main>
 </body>

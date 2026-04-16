@@ -10,7 +10,7 @@
         <select name="elev" id="elev">
           <% users.forEach(user=>{ %>
             <% if(user.role == 'user'){ %>
-            <option value="<%= user._id %>">
+            <option value="<%= user.username %>">
               <%= user.username %>
             </option>
             <% }}) %>
@@ -33,6 +33,18 @@
         </select>
         <button type="submit">Submit</button>
       </form>
+    </section>
+  </div>
+  <div class="uploads">
+    <section class="upload-card">
+      <% bedrift.forEach(company=>{ %>
+        <div class="company">
+          <h2>Elev: <%= company.elev %></h2>
+        <h3>Bedrift: <%= company.bedrift %></h3>
+        <h3>Stilling: <%= company.typeBedrift %></h3>
+        <h3>Representant: <%= company.representant %></h3>
+      </div>
+     <% }) %>
     </section>
   </div>
 </body>

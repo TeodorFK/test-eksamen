@@ -7,8 +7,10 @@ const admin_page = async (req, res) => {
   try {
     //Henter alle brukere fra databasen
     const users = await User.find();
+
+    const bedrift = await Bedrift.find();
     //render admin og sender brukerne
-    res.render('admin', { users });
+    res.render('admin', { users, bedrift });
   } catch (err) {
     //Console logger feilen og sender feilmelding
     console.log(err);
@@ -38,8 +40,10 @@ const represant_page = async (req, res) => {
   try {
     //Henter alle brukere fra databasen
     const users = await User.find();
+
+    const rep = await Feedback.find();
     //Render pagen og sender brukerne
-    res.render('representant', { users });
+    res.render('representant', { users, rep});
   } catch (err) {
     console.log(err);
     res.status(500).send('Internal Server Error');
