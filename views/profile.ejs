@@ -1,0 +1,15 @@
+<%- include('./partials/head') %>
+<link rel="stylesheet" href="/css/profile.css" />
+<body>
+  <%- include('./partials/header') %> 
+  <div>
+
+  </div>
+ <%  Companies.forEach(company=>{%>
+    <h1><%= company.bedrift %></h1>
+    <h2><%= company.typeBedrift %></h2>
+    <h2><%= company.representant %></h2>
+ <%})%>
+    
+
+</body>

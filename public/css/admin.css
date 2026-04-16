@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --Main-color: #bee3db;
+  --Second-color: #89b0ae 
+  --Third-color: #555b6e 
+  --Font-color: #403f48;
+}

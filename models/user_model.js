@@ -9,7 +9,7 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
-    required: true,
+    required: [true, "Passord må oppgis!!"],
   },
   role: {
     type: String,
@@ -21,8 +21,8 @@ const userSchema = new Schema({
 userSchema.pre('save', async function () {
   try {
     if (!this.isModified('password')) return;
-    
-    this.password =  await argon2;
+
+    this.password = await argon2.hash(this.password);
   } catch (err) {
     console.log(err);
   }

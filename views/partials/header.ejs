@@ -1,10 +1,11 @@
 <nav class="navbar">
-  <a href="/" class="logo">
-    Start
-  </a>
-  <% if(user) {%>
-    <% }else{ %>
-  <a href="/login" class="accountIcon"
-    >Login</a>
-  <% } %>
+  <a href="/" class="StartPage">Start</a>
+  <div class="nav-right">
+    <a href="">Veiledning</a>
+    <% if (user) { %>
+      <a href="/profile/:username" class="profile">profile</a>
+    <% } else { %>
+      <a href="/login" class="Login">Login</a>
+    <% } %>
+  </div>
 </nav>

@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  color: var(--gray-color);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--gray-color);
+  display: inline-block;
+  transition: transform 0.14s ease;
+  font-size: large;
+}
+
+.navbar a:hover {
+  transform: scale(1.14);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-blue-color);
+  padding: 1vw;
+}
+
+.StartPage {
+  padding-left: 1vw;
+}
+
+.Login {
+  padding-right: 2vw;
+}
+
+.nav-right {
+  display: flex;
+  gap: 3vw;
+  align-items: center;
+}
+
+:root {
+  --white-color: #ffff;
+  --light-blue-color: #44a1a0;
+  --dark-blue-color: #0d5c63;
+  --gray-color: #343434;
+}

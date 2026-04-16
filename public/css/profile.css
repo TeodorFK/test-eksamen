@@ -1,0 +1,39 @@
+
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #111;
+}
+
+/* Make company blocks look like a centered card */
+h1 + h2 {
+  display: none; /* optional: prevents raw list stacking if you keep current EJS */
+}
+
+/* Better approach: style a card container */
+.company-card {
+  background-color: #0b5f63; /* teal like image */
+  color: white;
+  padding: 18px 22px;
+  border-radius: 14px;
+  width: 220px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* spacing between lines in card */
+.company-card div {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/* center the card */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

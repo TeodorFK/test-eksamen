@@ -1,4 +1,38 @@
-<%- include('./partials/head') %> <%- include('./partials/header') %>
+<%- include('./partials/head') %>
+<link rel="stylesheet" href="css/admin.css">
 <body>
+  <%- include('./partials/header') %>
   <h1>Welcome admin</h1>
+  <div>
+    <section>
+      <form action="/admin" method="POST">
+        <label for="elev">Elev</label>
+        <select name="elev" id="elev">
+          <% users.forEach(user=>{ %>
+            <% if(user.role == 'user'){ %>
+            <option value="<%= user._id %>">
+              <%= user.username %>
+            </option>
+            <% }}) %>
+        </select>
+        <label for="bedrift">Bedrift</label>
+        <input type="text" name="bedrift">
+        <label for="">Type bedrift</label>
+        <select name="typeBedrift" id="typeBedrift">
+          <option value="lærling">Lærling</option>
+          <option value="praksis">Praksis</option>
+        </select>
+        <Label>Representant</Label>
+        <select name="representant" id="representant">
+          <% users.forEach(user=>{ %>
+            <% if(user.role == 'representant'){ %>
+            <option value="<%= user.username %>">
+              <%= user.username %>
+            </option>
+            <% }}) %>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </div>
 </body>
