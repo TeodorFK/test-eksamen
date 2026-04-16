@@ -102,10 +102,20 @@ const profile = async (req, res) => {
   }
 };
 
+const logout = (req, res) => {
+  try {
+    res.cookie('jwt', '', { maxAge: 1 });
+    res.redirect('/');
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 module.exports = {
   login_get,
   login_post,
   signup_get,
   signup_post,
   profile,
+  logout,
 };

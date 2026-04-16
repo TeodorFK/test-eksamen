@@ -1,9 +1,10 @@
 <nav class="navbar">
   <a href="/" class="StartPage">Start</a>
   <div class="nav-right">
-    <a href="">Veiledning</a>
+    <a href="/veiledning">Veiledning</a>
     <% if (user) { %>
       <a href="/profile/:username" class="profile">profile</a>
+      <a href="/logout">Logout</a>
     <% } else { %>
       <a href="/login" class="Login">Login</a>
     <% } %>

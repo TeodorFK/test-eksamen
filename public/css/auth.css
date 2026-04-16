@@ -15,26 +15,19 @@ body {
   color: var(--Font-color);
 }
 
-h1 {
-  color: var(--dark-blue-color);
-  text-align: center;
-  margin: 10vh auto 3vh;
-  font-weight: 700;
-}
-
-section {
-  max-width: 35vw;
-  margin: 0 auto;
+.form {
+  max-width: 480px;
+  margin: 60px auto;
   background-color: var(--light-blue-color);
-  padding: 5vh 4vw;
-  border-radius: 5vh;
-  box-shadow: 0 3vh 6vh rgba(0, 0, 0, 0.08);
+  padding: 36px 32px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 2vh;
+  gap: 18px;
 }
 
 label {
@@ -42,11 +35,11 @@ label {
   color: var(--white-color);
 }
 
-select,
-input[type='text'] {
-  padding: 2vh 2vw;
+input[type='text'],
+input[type='password'] {
+  padding: 14px 16px;
   border: 2px solid rgba(13, 92, 99, 0.2);
-  border-radius: 1.5vh;
+  border-radius: 12px;
   font-size: 1rem;
   color: var(--Font-color);
   background-color: #f9fafb;
@@ -55,23 +48,20 @@ input[type='text'] {
     box-shadow 0.2s ease;
 }
 
-select:focus,
-input[type='text']:focus {
+input[type='text']:focus,
+input[type='password']:focus {
   outline: none;
   border-color: var(--dark-blue-color);
-  box-shadow: 0 0 0 0.5vh rgba(13, 92, 99, 0.08);
+  box-shadow: 0 0 0 4px rgba(13, 92, 99, 0.08);
 }
 
-select:hover {
-  cursor: pointer;
-}
 button {
-  padding: 2vh 2vw;
-  margin-top: 1.5vh;
+  padding: 14px 18px;
+  margin-top: 10px;
   background-color: var(--Third-color);
   color: var(--white-color);
   border: none;
-  border-radius: 1.5vh;
+  border-radius: 12px;
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
@@ -82,5 +72,30 @@ button {
 
 button:hover {
   background-color: var(--dark-blue-color);
-  transform: translateY(-0.15vh);
+  transform: translateY(-1px);
+}
+
+.account {
+  text-align: center;
+  margin-top: 22px;
+}
+
+.account p {
+  margin: 0 0 8px;
+  color: var(--white-color);
+  font-size: 0.95rem;
+}
+
+.account a {
+  color: var(--white-color);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.14s ease;
+}
+
+.account a:hover {
+  color: var(--dark-blue-color);
+  transform: scale(1.03);
 }

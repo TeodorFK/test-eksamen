@@ -6,6 +6,15 @@ const index = (req, res) => {
   }
 };
 
+const veiLedning = (req, res) => {
+  try {
+    res.render('veiledning');
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 module.exports = {
   index,
+  veiLedning,
 };

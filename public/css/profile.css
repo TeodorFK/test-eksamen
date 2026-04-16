@@ -1,39 +1,45 @@
-
-
-h1 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #111;
+:root {
+  --white-color: #ffffff;
+  --light-blue-color: #44a1a0;
+  --dark-blue-color: #0d5c63;
+  --gray-color: #343434;
+  --Third-color: #0d5c63;
+  --Font-color: #1f2937;
 }
 
-/* Make company blocks look like a centered card */
-h1 + h2 {
-  display: none; /* optional: prevents raw list stacking if you keep current EJS */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--Font-color);
 }
 
-/* Better approach: style a card container */
-.company-card {
-  background-color: #0b5f63; /* teal like image */
-  color: white;
-  padding: 18px 22px;
-  border-radius: 14px;
-  width: 220px;
-  text-align: left;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-
-/* spacing between lines in card */
-.company-card div {
-  margin: 6px 0;
-  font-size: 14px;
-}
-
-/* center the card */
 .profile-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  max-width: 800px;
+  margin: 60px auto;
+  background-color: var(--light-blue-color);
+  padding: 36px 32px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.company {
+  margin-bottom: 24px;
+  padding: 18px;
+  background-color: var(--white-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company h1 {
+  margin: 0 0 8px;
+  color: var(--dark-blue-color);
+  font-size: 1.5rem;
+}
+
+.company h2 {
+  margin: 0 0 4px;
+  color: var(--gray-color);
+  font-size: 1.2rem;
 }

@@ -2,14 +2,16 @@
 <link rel="stylesheet" href="/css/profile.css" />
 <body>
   <%- include('./partials/header') %> 
-  <div>
 
+  <div class="profile-container">
+    <% Companies.forEach(company => { %>
+      <div class="company">
+        <h1>Bedrift: <%= company.bedrift %></h1>
+        <h2>Stilling: <%= company.typeBedrift %></h2>
+        <h2>Representant: <%= company.representant %></h2>
+      </div>
+    <% }) %>
   </div>
- <%  Companies.forEach(company=>{%>
-    <h1><%= company.bedrift %></h1>
-    <h2><%= company.typeBedrift %></h2>
-    <h2><%= company.representant %></h2>
- <%})%>
     
 
 </body>

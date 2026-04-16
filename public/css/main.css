@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--gray-color);
 }
 
@@ -39,8 +39,10 @@ body {
 }
 
 :root {
-  --white-color: #ffff;
+  --white-color: #ffffff;
   --light-blue-color: #44a1a0;
   --dark-blue-color: #0d5c63;
   --gray-color: #343434;
+  --Third-color: #0d5c63;
+  --Font-color: #1f2937;
 }

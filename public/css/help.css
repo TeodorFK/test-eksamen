@@ -1,0 +1,74 @@
+:root {
+  --white-color: #ffffff;
+  --light-blue-color: #44a1a0;
+  --dark-blue-color: #0d5c63;
+  --gray-color: #343434;
+  --Font-color: #1f2937;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--Font-color);
+}
+
+h1 {
+  text-align: center;
+  color: var(--dark-blue-color);
+  margin: 5vh 0 3.75vh;
+  font-size: 2.5rem;
+}
+
+.container {
+  max-width: 65vw;
+  margin: 0 auto;
+  padding: 0 2vw;
+}
+
+section {
+  margin-bottom: 5vh;
+  padding: 3.5vh 4vw;
+  background-color: rgb(229, 236, 237);
+  border-radius: 1.5vw;
+  border-left: 0.5vw solid var(--light-blue-color);
+  box-shadow: 0 0.5vh 1vh rgba(52, 52, 52, 0.1);
+}
+
+section h2 {
+  color: var(--dark-blue-color);
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 2vh;
+}
+
+section p {
+  color: var(--Font-color);
+  line-height: 1.6;
+  margin: 1.5vh 0;
+  font-size: 1rem;
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1vw;
+  margin-top: 2vh;
+  box-shadow: 0 0.6vh 1.8vh rgba(0, 0, 0, 0.1);
+}
+
+.intro {
+  background: linear-gradient(
+    135deg,
+    var(--light-blue-color) 0%,
+    var(--dark-blue-color) 120%
+  );
+  color: var(--white-color);
+  border-left: none;
+}
+
+.intro p {
+  color: var(--white-color);
+  font-weight: 500;
+}
