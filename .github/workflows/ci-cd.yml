@@ -11,21 +11,21 @@ jobs:
     name: Run Tests
     runs-on: ubuntu-latest
 
-steps:
-  - name: Checkout Github code
-    uses: actions/checkout@v4
+    steps:
+      - name: Checkout Github code
+        uses: actions/checkout@v4
 
-  - name: Setup Node.js
-    uses: actions/setup-node@v4
-    with:
-      node-version: '22'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
-  - name: Cache node modules
-    uses: actions/cache@v4
-    with:
-      path: ~/.npm
-      key: ${{ runner.os}}-npm-${{ hashFiles('**/package-lock.json')}}
-      restore-keys: ${{ runner.os }}-npm-
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os}}-npm-${{ hashFiles('**/package-lock.json')}}
+          restore-keys: ${{ runner.os }}-npm-
 
-  - run: npm install
-  - run: npm start
+      - run: npm install
+      - run: npm start
