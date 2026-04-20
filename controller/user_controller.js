@@ -78,7 +78,7 @@ const signup_post = async (req, res) => {
 //Brukerens profil
 const profile = async (req, res) => {
   try {
-    //henter in logget bruker fra auth middleware
+    //Henter in logget bruker fra auth middleware
     const loggedInUser = await User.findById(req.auth.id);
     console.log(loggedInUser);
 
